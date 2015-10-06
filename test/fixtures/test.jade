@@ -1,0 +1,21 @@
+//- @jadedoc
+  name: foo
+
+div.foo
+
+//- @jadedoc
+  name: faa
+
+div.faa
+
+
+//- @jadedoc
+  name: mixin
+  description: this is a mixin
+  arguments:
+    one: hello
+    two: world
+
+mixin foo(one, two)
+  p #{one}
+  p #{two}
