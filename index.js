@@ -74,6 +74,10 @@ function JadeDocMarkdown(options){
         arg.push(x);
       }
 
+      if(typeof this.key === 'undefined'){
+        return;
+      }
+
       lines.push(arg.join(''));
     });
     lines.push('');
