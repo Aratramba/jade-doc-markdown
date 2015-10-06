@@ -134,6 +134,9 @@ function JadeDocMarkdown(options){
       var snippet;
       json.forEach(function(obj){
 
+        // push to output
+        stream.push(JSON.stringify(obj));
+
         // create code snippet
         snippet = createSnippet(obj);
 
@@ -141,7 +144,11 @@ function JadeDocMarkdown(options){
         output.write(snippet);
       });
 
+      // end output file
       output.end();
+
+      // end stream
+      stream.push(null);
       
     }.bind(this));
   }
