@@ -34,7 +34,7 @@ function JadeDocMarkdown(options){
   mkdirp.sync(path.dirname(options.output));
   var output = fs.createWriteStream(options.output);
   output.on('close', function(){
-    stream.emit('end');
+    stream.emit('complete');
   }.bind(this));
 
   output.write('# Jade Documentation \n\n');

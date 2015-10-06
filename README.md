@@ -20,7 +20,7 @@ var jdm = new JadeDocMarkdown({
     input: 'data.json'
 });
 
-jdm.on('end', function(){
+jdm.on('complete', function(){
   console.log('complete');
 });
 ```

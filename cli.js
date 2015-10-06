@@ -26,6 +26,6 @@ var jdm = new JadeDocMarkdown({
 
 process.stdin.pipe(jdm).pipe(process.stdout);
 
-jdm.on('end', function(){
+jdm.on('complete', function(){
   process.exit();
 });
