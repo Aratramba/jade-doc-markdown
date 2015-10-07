@@ -38,7 +38,9 @@ beep: boop
 list: foo faa
 
 ```jade
-mixin foo(one, two) p #{one} p #{two}
+mixin foo(one, two)
+  p #{one}
+  p #{two}
 ```
 
 ```html

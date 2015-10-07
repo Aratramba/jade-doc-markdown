@@ -84,7 +84,7 @@ function JadeDocMarkdown(options){
 
     // push jade snippet
     lines.push('```jade');
-    lines.push(pretty(obj.source));
+    lines.push(obj.source);
     lines.push('```');
     lines.push('');
 
