@@ -29,11 +29,13 @@ div.faa
 
 
 ## mixin
-
 description: this is a mixin
 arguments
  one: hello
  two: world
+foo: faa
+beep: boop
+list: foo faa
 
 ```jade
 mixin foo(one, two) p #{one} p #{two}

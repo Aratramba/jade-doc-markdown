@@ -120,6 +120,11 @@ function JadeDocMarkdown(options){
     // push stream
     this.push(chunk);
     next();
+  }, function(cb){
+
+    // write final piece of html
+    output.end();
+    cb();
   });
 
 
@@ -148,11 +153,9 @@ function JadeDocMarkdown(options){
         output.write(snippet);
       });
 
-      // end output file
-      output.end();
-
       // end stream
       stream.push(null);
+      stream.end();
       
     }.bind(this));
   }
