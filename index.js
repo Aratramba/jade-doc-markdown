@@ -49,7 +49,8 @@ function JadeDocMarkdown(options){
 
     // push name to markdown output
     lines.push('## '+ obj.meta.name);
-    delete obj.meta.name;
+    lines.push(obj.meta.description);
+    lines.push('\n');
 
     // traverse all arguments
     // and indent according to level
@@ -63,6 +64,18 @@ function JadeDocMarkdown(options){
         return;
       }
 
+      if(this.key === 'name'){
+        return;
+      }
+
+      if(this.key === 'description'){
+        return;
+      }
+
+      if(typeof this.key === 'undefined'){
+        return;
+      }
+
       // set indentation
       spaces = new Array(this.level).join(' ');
       arg = [];
@@ -72,10 +85,6 @@ function JadeDocMarkdown(options){
       if(typeof x !== 'object'){
         arg.push(': ');
         arg.push(x);
-      }
-
-      if(typeof this.key === 'undefined'){
-        return;
       }
 
       lines.push(arg.join(''));

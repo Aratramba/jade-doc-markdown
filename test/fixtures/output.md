@@ -2,6 +2,9 @@
 
 ## foo
 
+
+
+
 ```jade
 div.foo
 ```
@@ -16,6 +19,9 @@ div.foo
 
 ## faa
 
+
+
+
 ```jade
 div.faa
 ```
@@ -29,7 +35,9 @@ div.faa
 
 
 ## mixin
-description: this is a mixin
+this is a mixin
+
+
 arguments
  one: hello
  two: world
