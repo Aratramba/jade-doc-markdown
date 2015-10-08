@@ -1,6 +1,6 @@
 {
   "name": "jade-doc-markdown",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Jade documentation output markdown",
   "main": "index.js",
   "scripts": {

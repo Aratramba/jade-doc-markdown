@@ -47,6 +47,8 @@ function JadeDocMarkdown(options){
   function createSnippet(obj){
     var lines = [];
 
+    obj = JSON.parse(JSON.stringify(obj));
+
     // push name to markdown output
     lines.push('## '+ obj.meta.name);
     lines.push(obj.meta.description);
