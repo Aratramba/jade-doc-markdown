@@ -1,6 +1,6 @@
 {
   "name": "jade-doc-markdown",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Jade documentation output markdown",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Aratramba/jade-doc-markdown#readme",
   "dependencies": {
+    "JSONStream": "^1.0.6",
     "faucet": "0.0.1",
     "is-empty-object": "^1.1.1",
     "meow": "^3.4.1",
@@ -33,7 +34,6 @@
     "object-assign": "^4.0.1",
     "pretty": "^1.0.0",
     "tape": "^4.2.1",
-    "through2": "^2.0.0",
     "traverse": "^0.6.6"
   }
 }

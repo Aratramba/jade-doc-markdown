@@ -5,6 +5,7 @@
 
 var meow = require('meow');
 var JadeDocMarkdown = require('./index');
+var JSONStream = require('JSONStream');
 
 var cli = meow({
   help: [
@@ -24,7 +25,7 @@ var jdm = new JadeDocMarkdown({
   output: cli.flags.output 
 });
 
-process.stdin.pipe(jdm).pipe(process.stdout);
+process.stdin.pipe(jdm).pipe(JSONStream.stringify()).pipe(process.stdout);
 
 jdm.on('complete', function(){
   process.exit();
