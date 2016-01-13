@@ -4,14 +4,14 @@
 
 
 var meow = require('meow');
-var JadeDocMarkdown = require('./index');
+var PugDocMarkdown = require('./index');
 var JSONStream = require('JSONStream');
 
 var cli = meow({
   help: [
     'Usage',
-    '  $ jade-doc --input file.jade | jade-doc-markdown --output file.md',
-    '  $ jade-doc-markdown --input file.json --output file.md',
+    '  $ pug-doc --input file.jade | pug-doc-markdown --output file.md',
+    '  $ pug-doc-markdown --input file.json --output file.md',
     '',
     'Options',
     '  --output    Set output markdown file',
@@ -20,13 +20,13 @@ var cli = meow({
 });
 
 
-var jdm = new JadeDocMarkdown({
+var stream = new PugDocMarkdown({
   input: cli.flags.input, 
   output: cli.flags.output 
 });
 
-process.stdin.pipe(jdm).pipe(JSONStream.stringify()).pipe(process.stdout);
+process.stdin.pipe(stream).pipe(JSONStream.stringify()).pipe(process.stdout);
 
-jdm.on('complete', function(){
+stream.on('complete', function(){
   process.exit();
 });

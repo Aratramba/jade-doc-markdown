@@ -13,13 +13,13 @@ var fs = require('fs');
 
 /**
  * Create markdown file from 
- * jade-doc stream or json file
+ * pug-doc stream or json file
  */
 
-function JadeDocMarkdown(options){
+function PugDocMarkdown(options){
 
   if(typeof options.output === 'undefined'){
-    throw new Error('Jade doc markdown requires settings.output to be set.');
+    throw new Error('Pug doc markdown requires settings.output to be set.');
   }
   
 
@@ -37,7 +37,7 @@ function JadeDocMarkdown(options){
     stream.emit('complete');
   }.bind(this));
 
-  output.write('# Jade Documentation \n\n');
+  output.write('# Pug Documentation \n\n');
 
 
   /**
@@ -167,4 +167,4 @@ function JadeDocMarkdown(options){
   return stream;
 }
 
-module.exports = JadeDocMarkdown;
+module.exports = PugDocMarkdown;

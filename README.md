@@ -1,26 +1,26 @@
-# Jade-doc Markdown
+# Pug-doc Markdown
 
-Generates Markdown output from a [Jade-doc](http://github.com/Aratramba/jade-doc/) stream or input jade-doc json.
+Generates Markdown output from a [Pug-doc](http://github.com/Aratramba/pug-doc/) stream or input pug-doc json.
 
 
 ### Command Line
 ```bash
-jade-doc-markdown --input jade-doc.json --output output.md
+pug-doc-markdown --input pug-doc.json --output output.md
 ```
 
 ```bash
-jade-doc input.jade | jade-doc-markdown --output output.md
+pug-doc input.jade | pug-doc-markdown --output output.md
 ```
 
 
 ### Node
 ```js
-var jdm = new JadeDocMarkdown({
+var stream = new PugDocMarkdown({
     output: 'output.html',
     input: 'data.json'
 });
 
-jdm.on('complete', function(){
+stream.on('complete', function(){
   console.log('complete');
 });
 ```

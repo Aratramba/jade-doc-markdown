@@ -1,6 +1,6 @@
 {
   "name": "pug-doc-markdown",
-  "version": "0.11.0",
+  "version": "1.0.0",
   "description": "Pug (Jade) documentation output markdown",
   "main": "index.js",
   "scripts": {
@@ -23,9 +23,7 @@
   "bugs": {
     "url": "https://github.com/Aratramba/pug-doc-markdown/issues"
   },
-  "bin": {
-    "pug-doc-markdown": "cli.js"
-  },
+  "bin": "cli.js",
   "homepage": "https://github.com/Aratramba/pug-doc-markdown#readme",
   "dependencies": {
     "JSONStream": "^1.0.6",

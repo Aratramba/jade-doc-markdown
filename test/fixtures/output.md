@@ -1,4 +1,4 @@
-# Jade Documentation 
+# Pug Documentation 
 
 ## foo
 
